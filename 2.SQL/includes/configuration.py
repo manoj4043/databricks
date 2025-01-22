@@ -1,4 +1,8 @@
 # Databricks notebook source
-raw_path="/mnt/vasanthblob/raw"
-process_path="/mnt/vasanthblob/processed"
-presentation_path="/mnt/vasanthblob/final"
+raw_path="/mnt/newdatabricks/raw"
+process_path="/mnt/newdatabricks/processed"
+presentation_path="/mnt/newdatabricks/final"
+
+# COMMAND ----------
+
+

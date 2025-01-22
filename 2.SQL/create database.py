@@ -40,7 +40,7 @@
 # MAGIC USING CSV
 # MAGIC OPTIONS (
 # MAGIC     header "true",
-# MAGIC     path 'abfss://raw@vasanthblob.dfs.core.windows.net/circuits.csv'
+# MAGIC     path 'mnt/newdatabricks/sql/raw/circuits.csv'
 # MAGIC )
 
 # COMMAND ----------
@@ -56,7 +56,7 @@
 # MAGIC time STRING,
 # MAGIC url STRING)
 # MAGIC USING csv
-# MAGIC OPTIONS (path "abfss://raw@vasanthblob.dfs.core.windows.net/races.csv", header true)
+# MAGIC OPTIONS (path "mnt/newdatabricks/raw/races.csv", header true)
 
 # COMMAND ----------
 
@@ -69,7 +69,7 @@
 # MAGIC nationality STRING,
 # MAGIC url STRING)
 # MAGIC USING json
-# MAGIC OPTIONS(path "abfss://raw@vasanthblob.dfs.core.windows.net/constructors.json")
+# MAGIC OPTIONS(path "mnt/newdatabricks/raw/constructors.json")
 
 # COMMAND ----------
 
@@ -85,7 +85,7 @@
 # MAGIC nationality STRING,
 # MAGIC url STRING)
 # MAGIC USING json
-# MAGIC OPTIONS (path "abfss://raw@vasanthblob.dfs.core.windows.net/drivers.json")
+# MAGIC OPTIONS (path "mnt/newdatabricks/raw/drivers.json")
 
 # COMMAND ----------
 
@@ -110,7 +110,7 @@
 # MAGIC fastestLapSpeed FLOAT,
 # MAGIC statusId STRING)
 # MAGIC USING json
-# MAGIC OPTIONS(path "abfss://raw@vasanthblob.dfs.core.windows.net/results.json")
+# MAGIC OPTIONS(path "mnt/newdatabricks/raw/results.json")
 
 # COMMAND ----------
 
@@ -125,7 +125,7 @@
 # MAGIC stop INT,
 # MAGIC time STRING)
 # MAGIC USING json
-# MAGIC OPTIONS(path "abfss://raw@vasanthblob.dfs.core.windows.net/pit_stops.json", multiLine true)
+# MAGIC OPTIONS(path "mnt/newdatabricks/raw/pit_stops.json", multiLine true)
 
 # COMMAND ----------
 
@@ -140,7 +140,7 @@
 # MAGIC milliseconds INT
 # MAGIC )
 # MAGIC USING csv
-# MAGIC OPTIONS (path "abfss://raw@vasanthblob.dfs.core.windows.net/lap_times")
+# MAGIC OPTIONS (path "mnt/newdatabricks/raw/lap_times")
 
 # COMMAND ----------
 
@@ -157,10 +157,10 @@
 # MAGIC qualifyId INT,
 # MAGIC raceId INT)
 # MAGIC USING json
-# MAGIC OPTIONS (path "abfss://raw@vasanthblob.dfs.core.windows.net/qualifying", multiLine true)
+# MAGIC OPTIONS (path "mnt/newdatabricks/raw/qualifying", multiLine true)
 
 # COMMAND ----------
 
 # MAGIC %sql
 # MAGIC create database f1_processed
-# MAGIC managed location "abfss://processed@vasanthblob.dfs.core.windows.net"
+# MAGIC managed location "mnt/newdatabricks/processed"

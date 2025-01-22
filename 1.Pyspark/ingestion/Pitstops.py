@@ -28,10 +28,6 @@ pit_stops_schema = StructType([StructField("raceId", IntegerType(), False),
 
 # COMMAND ----------
 
-dbutils.fs.ls("/mnt/vasanthblob/raw/")
-
-# COMMAND ----------
-
 pitshops=spark.read.format("json").schema(pit_stops_schema).option("multiline", "true").load(f"{raw_path}/pit_stops.json")
 
 # COMMAND ----------

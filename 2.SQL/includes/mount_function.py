@@ -1,9 +1,9 @@
 # Databricks notebook source
 def mount_adls(storage_account_name, container_name):
     
-    client_id=dbutils.secrets.get(scope="vasanth_keyvalt",key='clientid')
-    tentent_id=dbutils.secrets.get(scope="vasanth_keyvalt",key='tententid')
-    screat_id=dbutils.secrets.get(scope="vasanth_keyvalt",key='secretidnew')
+    client_id=dbutils.secrets.get(scope="manojscope",key='clientid')
+    tentent_id=dbutils.secrets.get(scope="manojscope",key='tenant')
+    screat_id=dbutils.secrets.get(scope="manojscope",key='screat')
     
     # Set spark configurations
     configs = {"fs.azure.account.auth.type": "OAuth",
@@ -26,4 +26,8 @@ def mount_adls(storage_account_name, container_name):
 
 # COMMAND ----------
 
-mount_adls("vasanthblob", "final")
+mount_adls("newdatabricks", "sql")
+
+# COMMAND ----------
+
+dbutils.fs.ls("/mnt/newdatabricks/sql/raw")

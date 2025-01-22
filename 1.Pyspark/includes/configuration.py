@@ -1,4 +1,4 @@
 # Databricks notebook source
-raw_path="/mnt/vasanthblob/pyspark/raw"
-process_path="/mnt/vasanthblob/pyspark/processed"
-presentation_path="/mnt/vasanthblob/pyspark/final"
+raw_path="/mnt/newdatabricks/pyspark/raw"
+process_path="/mnt/newdatabricks/pyspark/processed"
+presentation_path="/mnt/newdatabricks/pyspark/final"
